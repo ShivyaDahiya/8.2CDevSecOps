@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "NODE_OPTIONS=--openssl-legacy-provider nodemon ./app.js",
+    "coverage": "nyc --reporter=lcov --reporter=text npm test",
     "start": "NODE_OPTIONS=--openssl-legacy-provider node app.js",
     "build": "browserify -r jquery > public/js/bundle.js",
     "cleanup": "mongo express-todo --eval 'db.todos.remove({});'",
